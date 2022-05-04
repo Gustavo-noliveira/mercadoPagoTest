@@ -2,6 +2,8 @@ const express = require("express")
 const MercadoPago = require("mercadopago")
 const app = express()
 
+const port = process.env.PORT || 3000
+
 MercadoPago.configure({
   sandbox: true,
   access_token: "TEST-1359976839163755-050321-68c10f5e932d6b0ebddcb6a3fb52f466-326201614"
@@ -47,6 +49,6 @@ app.post("/not", (req, res) => {
   res.send("Ok")
 })
 
-app.listen(80, (req, res) => {
+app.listen(port, (req, res) => {
   console.log("Servidor rodando")
 })
