@@ -36,6 +36,7 @@ app.get("/pagar", async (req, res) => {
   try {
     var pagamento = await MercadoPago.preferences.create(dados)
     console.log(pagamento)
+    console.log("sucess")
     //Salvar pagamento, passando id da compra, e email do pagador 
     return res.redirect(pagamento.body.init_point)
   } catch (err) {
