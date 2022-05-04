@@ -34,12 +34,17 @@ app.get("/pagar", async (req, res) => {
   try {
     var pagamento = await MercadoPago.preferences.create(dados)
     console.log(pagamento)
-    //Salvar pagamento, passando id da compra, e email do pagador
+    //Salvar pagamento, passando id da compra, e email do pagador 
     return res.redirect(pagamento.body.init_point)
   } catch (err) {
     return res.send(err.message)
   }
 
+})
+
+app.post("/not", (req, res) => {
+  console.log(req.query)
+  res.send("Ok")
 })
 
 app.listen(3000, (req, res) => {
