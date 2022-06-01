@@ -1,10 +1,14 @@
-# Calcula-media
-Sistema para realizar o calculo da média entre 2 números
+# Movies API
 
-## Calcular media collection [/average]
+This is an API Blueprint example describing a movies API.
 
-### Buscar média [GET]
+# Group Movies
 
-Retorna a média entre dois números e o arredondamento dessa média utilizando a estratégia half Round Up.
+Resources related to movies in the API.
+## Movie collection [/movies]
+
+### List all Movies [GET]
+
+List movies in reverse order of publication.
 
 - Response 200 (application/json)
